@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot Interface</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat';
+            background-color: #f5faf6;
+        }
+    </style>
+</head>
+<body class="murda" style="margin: 0; padding: 0;">
+    <div class="columns" style="margin: 0; min-height: 100vh;">
+
+        <!-- Sidebar for smaller screens -->
+        <div class="column is-2 is-flex-touch"
+            style="background-color: #111828; color:#eeeeee;">
+            <nav class="navbar" role="navigation" aria-label="main navigation" style="background-color: #111828; position: relative;">
+                <div class="navbar-brand" style="background-color: #111828;">
+                    <!-- Toggle Button Inside Navbar Brand -->
+                    <div class="column is-size-3 px-0 ">
+                        <div class="column has-text-centered-mobile">
+                            <h1>CoalStack</h1>
+                        </div>
+                        
+                        <button id="toggle-button" class="button is-white is-hidden-desktop">
+                            <span class="icon">
+                                <img src="assets/bars-solid.svg" alt="bars-solid">
+                                <i class="fas fa-bars" style="color: #111828;"></i>
+                            </span>
+                        </button>
+                        <div class="column is-flex is-flex-direction-column">
+                            <aside id="menu-toggle" class="menu py-3 mb-6 ">
+                                <ul class="menu-list is-size-5 " style="color: #6a7181;">
+                                    <!-- Add your other menu items here -->
+                                    <li>
+                                        <a href="#" class="has-text-white">
+                                            <span class="icon is-size-6">
+                                                <img src="assets/home.png" alt="Home" class="mr-2">
+                                            </span>
+                                            <span class="ml-2">Home</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="has-text-white">
+                                            <span class="icon is-size-6">
+                                                <img src="assets/clock.png" class="mr-2">
+                                            </span>
+                                            <span class="ml-2">Chat History</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="has-text-white">
+                                            <span class="icon is-size-6">
+                                                <img src="assets/docs.png" class="mr-2">
+                                            </span>
+                                            <span class="ml-2">Docs</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="has-text-white">
+                                            <span class="icon is-size-6">
+                                                <img src="assets/update.png" class="mr-2">
+                                            </span>
+                                            <span class="ml-2">Updates</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="has-text-white">
+                                            <span class="icon is-size-6 mb-6">
+                                                <img src="assets/information.png" class="mr-2">
+                                            </span>
+                                            <span class="ml-2">About</span>
+                                        </a>
+                                    </li>
+                                    <!-- Add your other menu items here -->
+                                </ul>
+                            </aside>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <div class="bottom-child is-flex-direction-row field is-grouped is-hidden-mobile" style="position: absolute; bottom: 0; left: 1;">
+                <img src="assets/pfp.png" alt="pfp" class="mr-5 py-6">
+                <div class="is-size-3 py-6">Kailash</div>
+            </div> 
+        </div>
+
+        <!-- Main content -->
+        <div class="column is-10 content-container"
+            style="background-color: #f5faf6; min-height: 100%; display: flex; flex-direction: column; justify-content: space-between;">
+
+            <!-- Push the content to the top -->
+            <section class="section">
+                <div class="container">
+                    <div class="content">
+                        <div class="is-size-5 mt-1"
+                            style="color: black; background-color: #f5faf6;">
+                            Good Evening Kailash,
+                        </div>
+                        <div class="is-size-2 has-text-weight-bold mt-1"
+                            style="color: #6a7a81; background-color: #f5faf6;">
+                            Eva's here to help.
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Move the field is-grouped (search bar) and faq-box to the bottom -->
+            <div class="mb-3">
+                <div class="columns is-multiline">
+                    <div class="column is-one-third">
+                        <div class="box" style="background-color: #eeeeee;">
+                            <h2 class="title is-5">Who made CoalStack?</h2>
+                        </div>
+                    </div>
+                    <div class="column is-one-third">
+                        <div class="box" style="background-color: #eeeeee;">
+                            <h2 class="title is-5">What is CoalStack?</h2>
+                        </div>
+                    </div>
+                    <div class="column is-one-third">
+                        <div class="box" style="background-color: #eeeeee;">
+                            <h class="title is-5">Why we need CoalStack?</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="field is-grouped" style="height: 3rem; align-items: flex-end;">
+                    <p class="control is-expanded">
+                        <input class="input is-size-5 custom-search-bar" type="text" placeholder="Type your message">
+                    </p>
+                    <p class="control">
+                        <button class="button is-size-5">
+                            <span class="icon is-size-2">
+                                <img src="assets/send.png" alt="send">
+                            </span>
+                        </button>
+                    </p>
+                </div>
+                <style>
+                    /* Custom CSS to change the background color of the search bar */
+                    .custom-search-bar {
+                        background-color: #eeeeee !important; /* Use !important to override Bulma's styles */
+                        border-color: #f5faf6; 
+                    }
+                </style>
+                <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+                <script>
+                    const menuToggle = document.getElementById('menu-toggle');
+                    const toggleButton = document.getElementById('toggle-button');
+                
+                    toggleButton.addEventListener('click', () => {
+                        menuToggle.classList.toggle('is-hidden-mobile');
+                    });
+                </script>
+                
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
