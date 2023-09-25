@@ -45,9 +45,7 @@
                         <div class="field">
                             <div class="control mt-2">
                                 <button class="button is-fullwidth mt-0 my-2" style="background-color: #f5faf6; border: 1.5px solid #7c66ef;">
-                                    <span class="icon">
-                                        <img src="icon.png">
-                                    </span>
+                                    
                                     <a href="{% load socialaccount %}{% provider_login_url 'google' %}">
                                         <span class="has-text-weight-bold">Login with Google</span>
                                     </a>
@@ -58,8 +56,9 @@
                         
                         <!-- Sign Up Link -->
                         <div class="field has-text-centered has-text-weight-bold mt-7 py-0 ">
+                            
                             <p>
-                                Don't have an account? <a href="#" style=" margin-top:0 #7c66ef;">Sign Up</a>
+                                Don't have an account? <a href="http://localhost:8000/register/" style=" margin-top:0 #7c66ef;">Sign Up</a>
                             </p>
                         </div>
                     </div>
