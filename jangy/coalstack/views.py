@@ -12,3 +12,6 @@ def login(request):
 
 def landing(request):
     return render(request, 'coalstack/landing.html')
+
+def google_login(request):
+    return render(request, 'coalstack/google_form.html')

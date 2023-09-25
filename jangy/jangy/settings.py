@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'users.apps.UsersConfig',
     'coalstack.apps.CoalstackConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -152,3 +153,5 @@ SOCIALACCOUNT_PROVIDERS = {
         'AUTH_PARAMS': {'access_type': 'online'},
     }
 }
+
+SOCIALACCOUNT_LOGIN_ON_GET=True
